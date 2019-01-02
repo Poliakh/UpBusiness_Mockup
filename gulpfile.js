@@ -55,7 +55,6 @@ gulp.task('my', () => {
 // watch
 gulp.task('default',['build','server'], () => {
 	gulp.watch(path.watch.html, ['htmlmin']);
-	// gulp.watch('src/blocks/*.html', ['htmlmin']);
 	gulp.watch(path.watch.scss, ['sass']);
 	gulp.watch(path.watch.js, ['script']);
 	gulp.watch(path.watch.img, ['img']);
@@ -84,19 +83,18 @@ gulp.task('htmlmin', () => {
 gulp.task('sass', () => {
 	gulp.src(path.src.scss)
 	.pipe(sourcemaps.init())
-	.pipe( sass().on( 'error', notify.onError(//второе решение
-			{
-				message: "<%= error.message %>",
-				title  : "Sass Error!",
-			} ),util.beep() )
+	.pipe( sass({outputStyle: 'compressed'})
+			.on( 'error', notify.onError(		//второе решение
+				{
+					message: "<%= error.message %>",
+					title  : "Sass Error!",
+				} ),util.beep() )
 		)
-	// .pipe(plumber())
 		// .pipe(sass({
 		// 	outputStyle: 'compressed'
 		// 	}))
-		// 	.on('error', sass.logError)
 		.pipe(concat('style.css'))
-		//.pipe(cssnano())
+		.pipe(cssnano())
 		.pipe(autoprefixer(
 			['last 3 version', '> 1%', 'ie 8', 'ie 7'],
 			{cascade: true}))

@@ -1,6 +1,43 @@
-body{
-	background-color: bisque
+$bgf:#fff;
+$bgs:#709dca;
+$colfont:#868686;
+$colfontdark:#394b50;
+$colfontrew:#ffbb42;
+$colbut:#f78344;
+// font-family: 'gotham';
+*{
+	margin: 0;
+	padding: 0;
+
 }
-h1{
-	color: aquamarine
+.wrap{
+	min-width: 700px;
+	color:$colfont;
+	background-color: #fff;
+	// display: flex;
+	// justify-content: center;
+	margin:0 auto;
 }
+.container{
+	width: 1184px;
+	margin: 0 auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.link{
+	color:inherit;
+	text-decoration: none;
+}
+.item{
+	list-style: none;
+}
+
+@import './awesomfont/font-awesome.scss';
+@import '../fonts/Gotham/gotham.css';
+@import '../fonts/Lato/lato.css';
+@import '../fonts/Open_sans/OpenSans.css';
+
+@import '_header.scss';
+@import '_banner.scss';
+
+ 
