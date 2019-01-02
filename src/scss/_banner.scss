@@ -1,4 +1,64 @@
-.banner{
+.bannerWrap{
 	background-color: $bgs;
 	min-height: 589px;
+
+}
+.banner{
+	display: flex;
+	flex-direction: column;
+	// justify-content: center;
+	align-items: center;
+	&__head{
+		padding-top: 102px;
+		max-width: 770px;
+		
+	}
+	&__text{
+		max-width: 770px;
+		
+	}
+	&__form{
+		margin-top: 32px;
+	}
+}
+.form{
+	font-size: 0;
+	// width: 100%;
+	// margin-right: auto;
+	// margin-left: auto;
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	.button{
+		margin-bottom: 5px;
+		padding-top: 0;
+	}
+}
+.input{
+	display: block;
+	width: 281px;
+	height: 46px;
+	background-color: #fff;
+	border: none;
+	border-radius: 3px;
+	font-family: OpenSans, sans-serif;
+	font-size: 13px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	&::placeholder{
+		padding-left: 38px;
+		text-transform: capitalize;
+		color: inherit;
+	}
+	&__name{
+		& + label::before{
+			content:"\f007";
+			font-family: 'FontAwesome';
+			font-size: 16px;
+			color:inherit;
+			position: absolute;
+			left: 14px;
+			top:14px;
+		}
+	}
 }

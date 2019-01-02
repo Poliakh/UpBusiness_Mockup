@@ -1,5 +1,54 @@
-<div class="banner">
-	<div class="container">
-		
-	</div>
+<div class="bannerWrap">
+	<div class="banner container">
+		<h1 class="banner__head head">Boost up your Local business</h1>
+		<p class="banner__text head__text">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum typesetting
+		</p>
+		<form action="" class="banner__form form">
+			<input type="text" placeholder="Full Name" class="input input__name" req>
+			<label for="input__name"></label>
+			<input type="email" placeholder="email Address" class="input input__name">
+			<input type="tel" placeholder="Phone Number" class="input input__tel">
+			<button type="button" class="button">Request a quote</button>
+		</form>
+		<div class="slider">
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</div>
+		</div>
+<style>
+	
+#before {
+  padding: .6em 2.6em .6em .3em;
+  vertical-align: middle;
+}
+#before[required] + label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+#before[required] + label:before {
+  content: "\2709";
+  position: absolute;
+  left: -1.2em;
+  font-size: 23px;
+  color: rgb(238, 238, 238);
+}
+#before[required]:hover + label:before, #before[required]:focus + label:before {
+  color: rgb(220, 200, 200);
+}
+#before[required]:not(:focus):not(:hover):valid {
+  opacity: .4;
+}
+#before[required]:not(:focus):valid + label:before {
+  content: "\2714";
+  color: green;
+}
+
+</style>
+		<form>
+				<input type="email" placeholder="email" id="before" required>
+				<label for="before">&nbsp;</label>
+			  </form>
 </div>

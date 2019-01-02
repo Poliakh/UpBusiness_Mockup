@@ -19,20 +19,66 @@ $colbut:#f78344;
 	margin:0 auto;
 }
 .container{
-	width: 1184px;
+	max-width: 1184px;
 	margin: 0 auto;
 	padding-right: 15px;
 	padding-left: 15px;
+	// overflow: hidden;
 }
 .link{
 	color:inherit;
 	text-decoration: none;
+	white-space: nowrap;
 }
 .item{
 	list-style: none;
+	white-space: nowrap;
+}
+.head{
+	font-family: 'gotham';
+	font-size: 35px;
+	text-transform: uppercase;
+	color:#fff;
+	text-align: center;
+	&__text{
+		font-family: 'OpenSans-light', sans-serif;
+		font-size: 16px;
+		color:#fff;
+		text-align: center;
+	}
 }
 
-@import './awesomfont/font-awesome.scss';
+@mixin active{
+	background-color: #ffa200;
+	color: #8d8d8d;
+	box-shadow: 1px 1px 8px #ffa200c4, -1px -1px 8px #ffa200c4, 1px -1px 8px #ffa200c4, -1px 1px 8px #ffa200c4;
+	background: #f05a3f;
+	color: white;
+	box-shadow: 1px 1px 8px #ffa200c4, inset 2px 2px 3px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.2s, background-color 0.1s, color 0.1s;
+}
+
+
+.button{
+	width: 211px;
+	height: 46px;
+	background-color: $colfontrew;
+	color: #fff;
+	border:none;
+	border-radius: 3px;
+	text-transform: uppercase;
+	&:hover{
+		background-color: #ffa200;
+		color: #8d8d8d;
+		box-shadow: 1px 1px 8px #ffa200c4, -1px -1px 8px #ffa200c4, 1px -1px 8px #ffa200c4, -1px 1px 8px #ffa200c4;
+		transition: box-shadow 0.4s, background-color 0.2s, color 0.2s;
+	}
+	&:active{
+		@include active;
+	}
+}
+
+@import '../fonts/font-awesome-4.7.0/scss/font-awesome.scss';
 @import '../fonts/Gotham/gotham.css';
 @import '../fonts/Lato/lato.css';
 @import '../fonts/Open_sans/OpenSans.css';
