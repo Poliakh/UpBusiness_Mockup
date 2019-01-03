@@ -5,50 +5,23 @@
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum typesetting
 		</p>
 		<form action="" class="banner__form form">
-			<input type="text" placeholder="Full Name" class="input input__name" req>
-			<label for="input__name"></label>
-			<input type="email" placeholder="email Address" class="input input__name">
-			<input type="tel" placeholder="Phone Number" class="input input__tel">
+			<input type="text" placeholder="Full Name" class="input input__name"><label for="input__name"></label>
+
+			<input type="email" placeholder="email Address" class="input input__email"><label for="input__email">&nbsp;</label>
+
+			<input type="tel" placeholder="Phone Number" class="input input__tel"><label for="input__tel"></label>
 			<button type="button" class="button">Request a quote</button>
 		</form>
 		<div class="slider">
-			<div class="circle"></div>
-			<div class="circle"></div>
-			<div class="circle"></div>
+			<div class="slider__content">
+				<img src="./img/layer-24.png" alt="party" class="slider__img">
+				<img hidden src="./img/layer-24.png" alt="party" class="slider__img">
+				<img hidden src="./img/layer-24.png" alt="party" class="slider__img">
+			</div>
+			<div class="slider__control">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			</div>
 		</div>
 		</div>
-<style>
-	
-#before {
-  padding: .6em 2.6em .6em .3em;
-  vertical-align: middle;
-}
-#before[required] + label {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-}
-#before[required] + label:before {
-  content: "\2709";
-  position: absolute;
-  left: -1.2em;
-  font-size: 23px;
-  color: rgb(238, 238, 238);
-}
-#before[required]:hover + label:before, #before[required]:focus + label:before {
-  color: rgb(220, 200, 200);
-}
-#before[required]:not(:focus):not(:hover):valid {
-  opacity: .4;
-}
-#before[required]:not(:focus):valid + label:before {
-  content: "\2714";
-  color: green;
-}
-
-</style>
-		<form>
-				<input type="email" placeholder="email" id="before" required>
-				<label for="before">&nbsp;</label>
-			  </form>
-</div>

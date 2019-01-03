@@ -4,6 +4,7 @@ $colfont:#868686;
 $colfontdark:#394b50;
 $colfontrew:#ffbb42;
 $colbut:#f78344;
+$colactive:#f05a3f;
 // font-family: 'gotham';
 *{
 	margin: 0;
@@ -67,7 +68,7 @@ $colbut:#f78344;
 	border:none;
 	border-radius: 3px;
 	text-transform: uppercase;
-	&:hover{
+	&:hover, &:focus{
 		background-color: #ffa200;
 		color: #8d8d8d;
 		box-shadow: 1px 1px 8px #ffa200c4, -1px -1px 8px #ffa200c4, 1px -1px 8px #ffa200c4, -1px 1px 8px #ffa200c4;
@@ -83,7 +84,7 @@ $colbut:#f78344;
 @import '../fonts/Lato/lato.css';
 @import '../fonts/Open_sans/OpenSans.css';
 
-@import '_header.scss';
-@import '_banner.scss';
+@import 'header';
+@import 'banner';
 
  

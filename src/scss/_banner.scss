@@ -8,6 +8,7 @@
 	flex-direction: column;
 	// justify-content: center;
 	align-items: center;
+	position: relative;
 	&__head{
 		padding-top: 102px;
 		max-width: 770px;
@@ -22,43 +23,143 @@
 	}
 }
 .form{
-	font-size: 0;
-	// width: 100%;
-	// margin-right: auto;
-	// margin-left: auto;
+	font-size: 0px;
+	width: 1084px;
+	min-width:860px; 
 	display: flex;
-	align-items: flex-start;
+	justify-content: space-between;
+	// flex-wrap: wrap;
 	position: relative;
 	.button{
 		margin-bottom: 5px;
 		padding-top: 0;
 	}
 }
+
+%beforelabel{
+	font-family: 'FontAwesome';
+	font-size: 16px;
+	color:$colfont;
+	position: absolute;
+	left: 1.2%;
+	top:14px;
+	transition: 0.5s;
+
+}
+
 .input{
 	display: block;
-	width: 281px;
+	width: 22%;
 	height: 46px;
 	background-color: #fff;
 	border: none;
 	border-radius: 3px;
 	font-family: OpenSans, sans-serif;
 	font-size: 13px;
-	margin-right: 10px;
+	margin-right: 1%;
 	margin-bottom: 5px;
+	padding-left: 38px;
+	transition: 0.4s;
+	&:last-child{
+		margin-top: 0;
+	}
+	&:hover , &:focus{
+		box-shadow: 1px 1px 8px #ffa200c4, -1px -1px 8px #ffa200c4, 1px -1px 8px #ffa200c4, -1px 1px 8px #ffa200c4;
+		transition:box-shadow 0.15s;
+
+	}
 	&::placeholder{
-		padding-left: 38px;
 		text-transform: capitalize;
 		color: inherit;
 	}
 	&__name{
 		& + label::before{
 			content:"\f007";
-			font-family: 'FontAwesome';
-			font-size: 16px;
-			color:inherit;
-			position: absolute;
-			left: 14px;
-			top:14px;
+			@extend %beforelabel;
+			left: 1.2%;
+
 		}
+		&:hover + label::before, &:focus + label::before{
+			color:$colfontrew;
+			transition: color 0.4s;
+		}
+	}
+	&__email{
+		& + label::before{
+			content:'\f0e0';
+			@extend %beforelabel;
+			left: 28%;
+
+		}
+		&:hover + label::before, &:focus + label::before{
+			color:$colfontrew;
+			transition: 0.4s;
+		}
+	}
+	&__tel{
+		& + label::before{
+			content:'\f095';
+			@extend %beforelabel;
+			left: 54.8%;
+
+		}
+		&:hover + label::before, &:focus + label::before{
+			color:$colfontrew;
+			transition: 0.4s;
+		}
+	}
+}
+.slider{
+	width: 647px;
+	min-height: 344px;
+	position: absolute;
+	top: 307px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	&__content{
+		position: relative;
+		&:before{
+			content:'';
+			display: block;
+			width: 647px;
+			min-height: 344px;
+			background: url('../img/vector-smart-object.png') no-repeat center;
+			background-size: contain;
+			justify-content: center;
+		}
+	}
+	&__img{
+		width: 448px;
+		height: auto;
+		position: absolute;
+		top: 18px;
+		left: 100px;
+		border-radius: 3px;
+	}
+	&__control{
+		display: flex;
+		width: 56px;
+		justify-content: space-between;
+		margin-top: 24px;
+	}
+}
+.circle{
+	width: 12px;
+	height: 12px;
+	border: solid 2px $colfont;
+	border-radius: 50%;
+	transition: 0.8s;
+	&:hover, &:focus{
+		border-color: $colfontrew;
+		transition: 0.2s;
+
+	}
+	&:active{
+		border-color: $colactive;
+		background-color: $colactive;
+		transition: 0.2s;
+
 	}
 }
