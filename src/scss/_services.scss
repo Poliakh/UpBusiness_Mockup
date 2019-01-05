@@ -1,0 +1,76 @@
+.services{
+	// min-height: 679px;
+	padding-top: 194px;
+	padding-bottom: 82px;
+}
+
+.info{
+	display: flex;
+	justify-content: space-between;
+	margin-top:85px;
+	flex-wrap: wrap;
+	// flex-direction: column;
+
+}
+.column{
+	width: 47%;
+	margin-bottom: 17px;
+	min-height: 150px;
+	align-items: stretch;
+	&__block{
+		margin-left: 84px;
+	}
+	&__head{
+		font-family: 'Lato-bold';
+		font-size: 16px;
+		text-transform: uppercase;
+		margin-bottom: 12px;
+
+	}
+	&__text{
+		margin-top: 12px;
+		font-size: 13px;
+		font-family: 'OpenSans';
+		text-align: justify;
+		line-height: 22px;
+	}
+	&:hover{
+		cursor: pointer;
+	}
+	&:hover .styleIcon{
+		font-size: 52px;
+
+		text-shadow: 0 -1px 1px $colfontrew, 0 -1px 1px $colfontrew, 0 1px 1px $colfontrew, 0 1px 1px $colfontrew, -1px 0 1px $colfontrew, 1px 0 1px $colfontrew, -1px 0 1px $colfontrew, 1px 0 1px $colfontrew, -1px -1px 1px $colfontrew, 1px -1px 1px $colfontrew, -1px 1px 1px $colfontrew, 1px 1px 1px $colfontrew, -1px -1px 1px $colfontrew, 1px -1px 1px $colfontrew, -1px 1px 1px $colfontrew, 1px 1px 1px $colfontrew;
+		transition: text-shadow,font-size 0.5s;
+	
+	}
+
+}
+
+.styleIcon {
+	font-size: 50px;
+    position: absolute;
+    display: block;
+    margin-top: 0;
+    color: #fff;
+    text-shadow: 0 -1px 1px $bgs, 0 -1px 1px $bgs, 0 1px 1px $bgs, 0 1px 1px $bgs, -1px 0 1px $bgs, 1px 0 1px $bgs, -1px 0 1px $bgs, 1px 0 1px $bgs, -1px -1px 1px $bgs, 1px -1px 1px $bgs, -1px 1px 1px $bgs, 1px 1px 1px $bgs, -1px -1px 1px $bgs, 1px -1px 1px $bgs, -1px 1px 1px $bgs, 1px 1px 1px $bgs;
+	transition: text-shadow, font-size 0.3s;
+}
+.ord0{
+	order:0;
+}
+.ord1{
+	order:1;
+}
+.ord2{
+	order:2;
+}
+.ord3{
+	order:3;
+}
+.ord4{
+	order:4;
+}
+.ord5{
+	order:5;
+}

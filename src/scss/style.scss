@@ -5,6 +5,7 @@ $colfontdark:#394b50;
 $colfontrew:#ffbb42;
 $colbut:#f78344;
 $colactive:#f05a3f;
+$bgprice:#e7edf3;
 // font-family: 'gotham';
 *{
 	margin: 0;
@@ -12,7 +13,8 @@ $colactive:#f05a3f;
 
 }
 .wrap{
-	min-width: 700px;
+	min-width: 1000px;
+	overflow: hidden;
 	color:$colfont;
 	background-color: #fff;
 	// display: flex;
@@ -48,6 +50,9 @@ $colactive:#f05a3f;
 		text-align: center;
 	}
 }
+.c-dark{
+	color:$colfontdark;
+}
 
 @mixin active{
 	background-color: #ffa200;
@@ -69,6 +74,7 @@ $colactive:#f05a3f;
 	border-radius: 3px;
 	text-transform: uppercase;
 	&:hover, &:focus{
+		cursor: pointer;
 		background-color: #ffa200;
 		color: #8d8d8d;
 		box-shadow: 1px 1px 8px #ffa200c4, -1px -1px 8px #ffa200c4, 1px -1px 8px #ffa200c4, -1px 1px 8px #ffa200c4;
@@ -86,5 +92,8 @@ $colactive:#f05a3f;
 
 @import 'header';
 @import 'banner';
+@import 'services';
+@import 'about';
+@import 'price';
 
  

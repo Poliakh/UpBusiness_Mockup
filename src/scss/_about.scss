@@ -1,0 +1,40 @@
+.aboutWrap{
+	background-color: $colfontrew;
+}
+.about{
+	min-height: 623px;
+	display: flex;
+	&:before{
+		content:'';
+		display: block;
+		width: 50%;
+		min-height: inherit;
+		background: url('../img/layer-27.png') no-repeat right top;
+		background-size:cover;
+		
+	}
+	&__info{
+		width: 23%;
+		color: #fff;
+		margin-top: 159px;
+		margin-left: 80px;
+	}
+	&__head{
+		font-size: 30px;
+		text-align: left;
+	}
+	&__text{
+		font-family: 'OpenSans';
+		font-size: 13px;
+		text-align: justify;
+		line-height: 24px;
+		margin-top: 14px;
+	}
+	&__button{
+		border: solid 2px #e7ad48;
+		border-radius: 3px;
+		margin-top: 26px;
+		width: 145px;
+		height: 46px;
+	}
+}
