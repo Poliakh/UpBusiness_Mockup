@@ -14,13 +14,15 @@
 		
 	}
 	&__info{
-		width: 23%;
+		max-width: 502px;
+		min-width: 375px;
+		width: 26%;
 		color: #fff;
 		margin-top: 159px;
 		margin-left: 80px;
 	}
-	&__head{
-		font-size: 30px;
+	&__header{
+		@extend %header;
 		text-align: left;
 	}
 	&__text{
@@ -30,10 +32,10 @@
 		line-height: 24px;
 		margin-top: 14px;
 	}
-	&__button{
+	&__button-ab{
 		border: solid 2px #e7ad48;
 		border-radius: 3px;
-		margin-top: 26px;
+		margin-top: 33px;
 		width: 145px;
 		height: 46px;
 	}

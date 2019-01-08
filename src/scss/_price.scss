@@ -6,28 +6,26 @@
 .price{
 
 	&__head{
-		padding-top: 126px;
+		padding-top: 130px;
 	}
 }
 .cards{
+	width: 100%;
 	font-size: 0px;
-	// display: flex;
-	justify-content: center;
-	// margin-top: 75px;
 	white-space: nowrap;
+	justify-content: center;
+	margin: 0 auto;
 }
 .card{
 	margin-top: 75px;
 	display: inline-block;
-	width: 33%;
+	width: 33.333%;
 	min-width: 270px;
 	min-height: 440px;
 	background-color: #fff;
-	// margin-left: 2px;
-	border:solid 1px $colfont ;
+	border:solid 1px $bgprice ;
 	border-radius: 3px;
 	box-sizing: border-box;
-	// position: relative;
 	transition:all 0.8s;
 
 	&:hover{
@@ -36,11 +34,11 @@
 		background-color: $bgs;
 		margin-top: 45px;
 		position: relative;
-		// bottom:50px;
 		transition:all 0.8s;
 	}
 	&:hover &__cont{
 		margin-top: 30px;
+		color:#fff;
 		transition: all 0.8s;
 
 	}

@@ -13,7 +13,7 @@ $bgprice:#e7edf3;
 
 }
 .wrap{
-	min-width: 1000px;
+	min-width: 700px;
 	overflow: hidden;
 	color:$colfont;
 	background-color: #fff;
@@ -37,21 +37,32 @@ $bgprice:#e7edf3;
 	list-style: none;
 	white-space: nowrap;
 }
-.head{
+%header{
 	font-family: 'gotham';
-	font-size: 35px;
+	font-size: 30px;
 	text-transform: uppercase;
-	color:#fff;
+	color:inherit;
 	text-align: center;
+}
+
+.head{
+	color:$colfont;
+	&__header{
+		@extend %header;
+
+	}
 	&__text{
 		font-family: 'OpenSans-light', sans-serif;
 		font-size: 16px;
-		color:#fff;
+		color:inherit;
 		text-align: center;
 	}
 }
 .c-dark{
 	color:$colfontdark;
+}
+.c-white{
+	color:#fff;
 }
 
 @mixin active{
@@ -63,6 +74,10 @@ $bgprice:#e7edf3;
 	box-shadow: 1px 1px 8px #ffa200c4, inset 2px 2px 3px rgba(0, 0, 0, 0.1);
 	transition: box-shadow 0.2s, background-color 0.1s, color 0.1s;
 }
+@mixin icon-shadow($color){
+	text-shadow: 0 -1px 1px $color, 0 -1px 1px $color, 0 1px 1px $color, 0 1px 1px $color, -1px 0 1px $color, 1px 0 1px $color, -1px 0 1px $color, 1px 0 1px $color, -1px -1px 1px $color, 1px -1px 1px $color, -1px 1px 1px $color, 1px 1px 1px $color, -1px -1px 1px $color, 1px -1px 1px $color, -1px 1px 1px $color, 1px 1px 1px $color;
+	transition: text-shadow, font-size 0.3s;
+}
 
 
 .button{
@@ -73,6 +88,7 @@ $bgprice:#e7edf3;
 	border:none;
 	border-radius: 3px;
 	text-transform: uppercase;
+	white-space: nowrap;
 	&:hover, &:focus{
 		cursor: pointer;
 		background-color: #ffa200;
@@ -84,6 +100,13 @@ $bgprice:#e7edf3;
 		@include active;
 	}
 }
+.logo{
+		display: block;
+		width: 50px;
+		height: 48px;
+		background: url('../img/main-logo.png') no-repeat center;
+}
+
 
 @import '../fonts/font-awesome-4.7.0/scss/font-awesome.scss';
 @import '../fonts/Gotham/gotham.css';
@@ -95,5 +118,9 @@ $bgprice:#e7edf3;
 @import 'services';
 @import 'about';
 @import 'price';
+@import 'howitworks';
+@import 'happyclients';
+@import 'newsletter';
+@import 'footer';
 
  

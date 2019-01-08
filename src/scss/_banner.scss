@@ -12,54 +12,47 @@
 	&__head{
 		padding-top: 102px;
 		max-width: 770px;
-		
-	}
-	&__text{
-		max-width: 770px;
-		
 	}
 	&__form{
 		margin-top: 32px;
 	}
 }
+.head__header-banner{
+	font-size: 35px;
+}
+.head__text-banner{
+	max-width: 770px;
+}
 .form{
 	font-size: 0px;
-	width: 1084px;
+	width: 92%;
 	min-width:860px; 
 	display: flex;
 	justify-content: space-between;
-	// flex-wrap: wrap;
+	flex-wrap: nowrap;
 	position: relative;
-	.button{
-		margin-bottom: 5px;
-		padding-top: 0;
-	}
 }
 
-%beforelabel{
-	font-family: 'FontAwesome';
-	font-size: 16px;
-	color:$colfont;
-	position: absolute;
-	left: 1.2%;
-	top:14px;
-	transition: 0.5s;
 
-}
-
-.input{
-	display: block;
+.inputwrap{
+	// width: 100%;
 	width: 22%;
+	// margin-right: 5%;
+	position: relative;
+}
+.input{
+	width: 100%;
+	display: block;
 	height: 46px;
 	background-color: #fff;
 	border: none;
 	border-radius: 3px;
 	font-family: OpenSans, sans-serif;
 	font-size: 13px;
-	margin-right: 1%;
 	margin-bottom: 5px;
 	padding-left: 38px;
 	transition: 0.4s;
+	color:#b8b8b8;
 	&:last-child{
 		margin-top: 0;
 	}
@@ -72,40 +65,44 @@
 		text-transform: capitalize;
 		color: inherit;
 	}
-	&__name{
-		& + label::before{
-			content:"\f007";
-			@extend %beforelabel;
-			left: 1.2%;
+	
+}
+%beforelabel{
+	font-family: 'FontAwesome';
+	font-size: 16px;
+	color:#b8b8b8;
+	position: absolute;
+	left: 4.5%;
+	top:14px;
+	transition: 0.5s;
 
-		}
-		&:hover + label::before, &:focus + label::before{
+}
+.hov{
+	&:hover {
+		&::before{
 			color:$colfontrew;
 			transition: color 0.4s;
 		}
 	}
-	&__email{
-		& + label::before{
-			content:'\f0e0';
+}
+.fa-{
+	
+	&name{
+		&::before{
+			content:"\f007";
 			@extend %beforelabel;
-			left: 28%;
-
-		}
-		&:hover + label::before, &:focus + label::before{
-			color:$colfontrew;
-			transition: 0.4s;
 		}
 	}
-	&__tel{
-		& + label::before{
+	&email{
+		&::before{
+			content:'\f0e0';
+			@extend %beforelabel;
+		}
+	}
+	&tel{
+		&::before{
 			content:'\f095';
 			@extend %beforelabel;
-			left: 54.8%;
-
-		}
-		&:hover + label::before, &:focus + label::before{
-			color:$colfontrew;
-			transition: 0.4s;
 		}
 	}
 }

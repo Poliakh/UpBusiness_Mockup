@@ -2,12 +2,15 @@
 	// min-height: 679px;
 	padding-top: 194px;
 	padding-bottom: 82px;
+	&__head{
+		margin-top: 4px;
+	}
 }
 
 .info{
 	display: flex;
 	justify-content: space-between;
-	margin-top:85px;
+	margin-top:88px;
 	flex-wrap: wrap;
 	// flex-direction: column;
 
@@ -25,7 +28,6 @@
 		font-size: 16px;
 		text-transform: uppercase;
 		margin-bottom: 12px;
-
 	}
 	&__text{
 		margin-top: 12px;
@@ -39,8 +41,7 @@
 	}
 	&:hover .styleIcon{
 		font-size: 52px;
-
-		text-shadow: 0 -1px 1px $colfontrew, 0 -1px 1px $colfontrew, 0 1px 1px $colfontrew, 0 1px 1px $colfontrew, -1px 0 1px $colfontrew, 1px 0 1px $colfontrew, -1px 0 1px $colfontrew, 1px 0 1px $colfontrew, -1px -1px 1px $colfontrew, 1px -1px 1px $colfontrew, -1px 1px 1px $colfontrew, 1px 1px 1px $colfontrew, -1px -1px 1px $colfontrew, 1px -1px 1px $colfontrew, -1px 1px 1px $colfontrew, 1px 1px 1px $colfontrew;
+		@include icon-shadow($colfontrew);
 		transition: text-shadow,font-size 0.5s;
 	
 	}
@@ -52,8 +53,8 @@
     position: absolute;
     display: block;
     margin-top: 0;
-    color: #fff;
-    text-shadow: 0 -1px 1px $bgs, 0 -1px 1px $bgs, 0 1px 1px $bgs, 0 1px 1px $bgs, -1px 0 1px $bgs, 1px 0 1px $bgs, -1px 0 1px $bgs, 1px 0 1px $bgs, -1px -1px 1px $bgs, 1px -1px 1px $bgs, -1px 1px 1px $bgs, 1px 1px 1px $bgs, -1px -1px 1px $bgs, 1px -1px 1px $bgs, -1px 1px 1px $bgs, 1px 1px 1px $bgs;
+	color: #fff;
+	@include icon-shadow($bgs);
 	transition: text-shadow, font-size 0.3s;
 }
 .ord0{

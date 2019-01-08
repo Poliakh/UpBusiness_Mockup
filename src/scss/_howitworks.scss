@@ -1,0 +1,78 @@
+.howWrap{
+	width: 100%;
+	min-height: 858px;
+}
+.howwork{
+	&__button{
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 89px;
+		width: 165px;
+		height: 46px;
+	}
+}
+.steps{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 106px;
+	position: relative;
+
+}
+.work{
+	&__head{
+		padding-top:147px ;
+	}
+}
+.arrowWrap{
+	position: absolute;
+	top:0;
+	width:76%;
+	display: flex;
+	justify-content: space-around;
+}
+.arrow{
+	display: block;
+	width: 15%;
+	height: 35px;
+	background: url('../img/arrow.png') no-repeat center;
+	background-size: 100% auto;
+	position: relative;
+	bottom: 30px;
+}
+.arrow-rotate{
+	top:61px;
+	transform:rotate(180deg); 
+	position: relative;
+
+}
+.step{
+	max-width: 213px;
+	min-width: 150px;
+	width: 18%;
+	text-align: center;
+	// position: relative;
+	&__icon{
+		// font-family: 'FontAwesome';
+		font-size: 68px;
+		color: #fff;
+		@include icon-shadow($bgs);
+		transition: text-shadow 0.5s;
+		margin-bottom: 88px;
+	}
+	&:hover &__icon{
+		@include icon-shadow($colfontrew);
+	}
+	&__head{
+		font-family: "Lato-bold";
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+	&__text{
+		font-family: 'OpenSans';
+		font-size: 13px;
+		margin-top: 20px;
+		line-height: 22px;
+	}
+}

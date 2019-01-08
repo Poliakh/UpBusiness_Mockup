@@ -69,12 +69,14 @@ gulp.task('build',['clean','htmlmin','sass','script','img'], () => {
 //posthtml-include, posthtml-minifier или htmlnano.
 gulp.task('htmlmin', () => {
 	gulp.src(path.src.html)
+		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		.pipe(gulpImport('src/blocks/'))
 		.pipe(htmlMin({
 			// collapseWhitespace: true,
-			removeComments: true
+			// removeComments: true
 		}))
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.build.html))
 		.pipe(browserSync.reload({stream:true}));
 });
@@ -83,7 +85,7 @@ gulp.task('htmlmin', () => {
 gulp.task('sass', () => {
 	gulp.src(path.src.scss)
 	.pipe(sourcemaps.init())
-	.pipe( sass({outputStyle: 'compressed'})
+	.pipe( sass(/* {outputStyle: 'compressed'} */)
 			.on( 'error', notify.onError(		//второе решение
 				{
 					message: "<%= error.message %>",
@@ -93,8 +95,8 @@ gulp.task('sass', () => {
 		// .pipe(sass({
 		// 	outputStyle: 'compressed'
 		// 	}))
-		.pipe(concat('style.css'))
-		.pipe(cssnano())
+		// .pipe(concat('style.css'))
+		// .pipe(cssnano())
 		.pipe(autoprefixer(
 			['last 3 version', '> 1%', 'ie 8', 'ie 7'],
 			{cascade: true}))
@@ -103,13 +105,13 @@ gulp.task('sass', () => {
 		.pipe(browserSync.reload({stream:true}));
 });
 
-function errorHandler(error) {
+errorHandler = (error) => {
     // 3 beeps for error
     util.beep();
     util.beep();
     util.beep();
     return true;
-}
+};
 
 //css - работает
 // gulp.task('style',['sass'], () => {

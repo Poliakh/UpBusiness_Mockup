@@ -1,0 +1,102 @@
+.happy{
+	&Wrap{
+		background-color: $colfontrew;
+		min-height: 908px;
+	}
+	&__head{
+		padding-top:135px ;
+	}
+}
+.list{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 58px;
+	&__cardCli{
+	}
+	
+}
+.cardCli{
+	background-color: #fff;
+	width: calc( (100% - 3%) / 2 );
+	min-width: 480px;
+	min-height: 241px;
+	margin-bottom: 20px;
+	border-radius: 2px;
+	position: relative;
+	&:before{
+		content:'';
+		display: block;
+		width: 124px;
+		height: 124px;
+		border-radius: 50%;
+		overflow: hidden;
+		background: url('../img/layer-26.png') no-repeat center;
+		position: absolute;
+		top: 16%;
+		left: 6%;
+	}
+	&__textBox{
+		width: auto;
+		margin-left: 33%;
+		margin-right: 7%;
+		margin-top: 42px;
+		line-height: 23px;
+		font-family: 'OpenSans';
+		font-size: 13px;
+	}
+	&__text{
+		text-align: justify;
+		position: relative;
+		&:before{
+			content: '\f10d';
+			font-family: 'FontAwesome';
+			font-size: 11px;
+			color: #6e6e6e;
+			position: absolute;
+			top: -7px;
+			left: -17px;
+
+		}
+		&:after{
+			content: '\f10e';
+			font-family: 'FontAwesome';
+			font-size: 11px;
+			color: #6e6e6e;
+			position: absolute;
+			bottom: -14px;
+			right: 0px;
+		}
+	}
+	&__name{
+		font-family: 'Lato';
+		font-size: 14px;
+		text-transform: uppercase;
+		margin-top: 17px;
+	}
+	&__name-col{
+		color:$colbut;
+	}
+
+}
+.michel{
+	&:before{
+		background: url('../img/layer-26.png') no-repeat center;
+	}
+}
+.elisabet{
+	&:before{
+		background: url('../img/layer-22.png') no-repeat center;
+	}
+}
+.arter{
+	&:before{
+		background: url('../img/layer-25.png') no-repeat center;
+	}
+}
+.cristafr{
+	&:before{
+		background: url('../img/layer-23.png') no-repeat center;
+	}
+}
