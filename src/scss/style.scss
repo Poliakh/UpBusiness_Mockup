@@ -7,6 +7,11 @@ $colbut:#f78344;
 $colactive:#f05a3f;
 $bgprice:#e7edf3;
 // font-family: 'gotham';
+@import '../fonts/font-awesome-4.7.0/scss/font-awesome.scss';
+@import '../fonts/Gotham/gotham.css';
+@import '../fonts/Lato/lato.css';
+@import '../fonts/Open_sans/OpenSans.css';
+
 *{
 	margin: 0;
 	padding: 0;
@@ -108,10 +113,6 @@ $bgprice:#e7edf3;
 }
 
 
-@import '../fonts/font-awesome-4.7.0/scss/font-awesome.scss';
-@import '../fonts/Gotham/gotham.css';
-@import '../fonts/Lato/lato.css';
-@import '../fonts/Open_sans/OpenSans.css';
 
 @import 'header';
 @import 'banner';
