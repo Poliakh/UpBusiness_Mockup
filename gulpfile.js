@@ -47,7 +47,7 @@ let gulp			= require ('gulp'),
 			fonts:	'src/fonts/**/*.*'
 		},
 		dir: 'build',
-		produc:'../poliakh.github.io/myportfolio/makets/upbusiness',
+		produc:'../poliakh.github.io/myportfolio/site/upbusiness',
 		test : 'test'
 	};
 
